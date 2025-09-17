@@ -25,8 +25,8 @@ A smart application for task management and expense tracking with advanced data 
 
 ### Prerequisites
 
-- Node.js 18.17 or higher
-- npm or yarn
+- Node.js 20.19.16
+- npm
 
 ### Installation and Setup
 
@@ -59,18 +59,18 @@ npm run type-check   # Check TypeScript
 
 ```
 src/
-├── app/                 # App Router pages
-│   ├── tasks/          # Task-related pages
-│   ├── expenses/       # Expense-related pages
-│   └── analytics/      # Analytics dashboard
+├── app/
+│   ├── ـcomponents/    # Generic UI components
+│   ├── _lib/           # Libraries and utilities
+│   ├── _styles/        # styles
+│   ├── _types/         # TypeScript type definitions
+│   ├── _stres/         # Zustand stores
+│   └── _utils/
 ├── components/
 │   ├── ui/             # Generic UI components
 │   ├── tasks/          # Task-related components
 │   ├── expenses/       # Expense-related components
 │   └── shared/         # Shared components
-├── stores/             # Zustand stores
-├── lib/                # Libraries and utilities
-├── types/              # TypeScript type definitions
 └── hooks/              # Custom React hooks
 ```
 

@@ -1,25 +1,35 @@
-# 🎯 Smart To-Do & Expense Tracker
+# 🎯 Smart To-Do
 
 A smart application for task management and expense tracking with advanced data visualization and local storage capabilities.
 
 ## ✨ Features
 
-### 📋 Task Management
+📋 Task Management
 
-### 💰 Expense Tracking
+- \*\* Create, edit, and delete tasks with subtasks, notes, attachments, and repeat options (daily/weekly).
+- \*\* Categories: No Category, Wishlist, Work, Personal, Birthday, Daily.
+- \*\* Filters: All Tasks, Today, Future/Previous, by category or status.
+- \*\* Quick search and priority sorting.
+
+📅 Calendar Integration
+
+- \*\* Interactive calendar grid with overlaid tasks and due dates.
+- \*\* Set reminders with time pickers and snooze options.
 
 ### 🎨 User Interface
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 15.5.3 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **State Management:** Zustand
-- **Data Visualization:** Recharts
-- **Storage:** IndexedDB
-- **Icons:** Lucide React
-- **Utils:** date-fns
+- \*\* Framework: Next.js 15.5.4 (App Router)
+- \*\* Language: TypeScript
+- \*\* Styling: Tailwind CSS 4 + daisy/UI
+- \*\* State Management: Zustand with LocalStorage persistence
+- \*\* Forms: React Hook Form
+- \*\* Data Visualization: Recharts
+- \*\* Icons: Lucide React
+- \*\* Dates: date-fns
+- \*\* Animations: Framer Motion
+- \*\* Font: Inter ....
 
 ## 🚀 Quick Start
 
@@ -59,7 +69,7 @@ npm run type-check   # Check TypeScript
 
 ```
 src/
-├── app/
+├── app/                # App Router pages and layouts
 │   ├── ـcomponents/    # Generic UI components
 │   ├── _lib/           # Libraries and utilities
 │   ├── _styles/        # styles
@@ -78,46 +88,43 @@ src/
 
 ### Task Management
 
-1. Click on **"Add Task"**
-2. Enter title, description, and deadline
-3. Select priority and category
-4. Save the task
+1. Navigate to the Tasks tab (default home).
+2. Tap + to open the create modal.
+3. Enter title, optional notes/subtasks, select category, due date/time, and reminder/repeat.
+4. Save—task appears in lists with checkboxes for completion.
 
-### Expense Tracking
+## Calendar View
 
-1. Click on **"Add Transaction"**
-2. Enter amount, category, and description
-3. Select transaction type (Income/Expense)
-4. Record the transaction
+1. Switch to Calendar tab.
+2. Tap a date to view/add tasks; badges show counts.
+
+## Progress Tracking
+
+1. Go to Mine tab for your dashboard.
+2. View rings/graphs; tap previews for quick edits.
 
 ## 📊 Advanced Features
 
 ### Local Storage
 
-- All data stored in IndexedDB
-- Offline functionality
-- Data backup and restore
+1. Tasks persist via Zustand + LocalStorage.
+2. Offline-first: Works without internet; syncs on reconnect.
 
 ### Data Visualization
 
-- Pie chart for expenses by category
-- Line chart for expense trends over time
-- Bar chart comparing income vs expenses
-- Task progress visualization
+1. Line Chart: Daily task completion trends (Recharts).
+2. Pie Chart: Tasks by category breakdown.
+3. Ring Chart: Overall progress (total vs. completed).
 
 ### Filter and Search
 
-- Filter tasks by status, priority, and category
-- Filter expenses by date and category
-- Quick search in task and expense text
+1. Dropdown filters for views (Today/Future) and categories.
+2. Search bar for titles/notes.
+3. Sort by due date, priority, or completion.
 
 ## 🤝 Contributing
 
-1. Fork the project
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Create a Pull Request
+<!--  -->
 
 ## 📝 License
 
@@ -138,10 +145,9 @@ _Screenshots will be added after UI completion_
 ## 🗺️ Roadmap
 
 - [ ] ✅ Core task management
-- [ ] 💰 Basic expense tracking
+- [ ] 💰 Reminders and settings toggles
 - [ ] 📊 Main charts
 - [ ] 🌙 Dark mode
 - [ ] 📱 Improved Mobile UI
-- [ ] 🔄 Cloud synchronization (Future)
-- [ ] 📧 Email reminders (Future)
-- [ ] 🤖 AI for expense prediction (Future)
+- [ ] 🔄 FAQ and menu polish
+- [ ] 📧 PWA for app-like install (Future)

@@ -1,15 +1,18 @@
 # 🎯 Smart To-Do
 
-A smart application for task management and expense tracking with advanced data visualization and local storage capabilities.
+A modern, mobile-first to-do app built with Next.js, featuring task categorization, calendar integration, reminders, and progress analytics. Dark purple theme for that sleek, focused vibe—perfect for daily planning without the clutter.
 
 ## ✨ Features
 
 📋 Task Management
 
-- \*\* Create, edit, and delete tasks with subtasks, notes, attachments, and repeat options (daily/weekly).
-- \*\* Categories: No Category, Wishlist, Work, Personal, Birthday, Daily.
-- \*\* Filters: All Tasks, Today, Future/Previous, by category or status.
-- \*\* Quick search and priority sorting.
+- \*\* Task Management: Create, edit, delete tasks with subtasks, notes, attachments, and repeats (daily/weekly).
+- \*\* Smart Filtering: Views for All, Today, Future/Previous, and categories (Work, Personal, Wishlist, Birthday, Daily).
+- \*\* Calendar Sync: Visual grid with overlaid tasks and due dates.
+- \*\* Reminders & Notifications: Set times, tones, and snoozes via settings.
+- \*\* Progress Dashboard: Stats in "Mine" tab—completion rings, line graphs, pie charts for categories.
+- \*\* Customization: Themes, languages, date formats, and FAQ support.
+- \*\* Offline-First: LocalStorage persistence for seamless use.
 
 📅 Calendar Integration
 
@@ -21,7 +24,7 @@ A smart application for task management and expense tracking with advanced data 
 ## 🛠️ Tech Stack
 
 - \*\* Framework: Next.js 15.5.4 (App Router)
-- \*\* Language: TypeScript
+- \*\* Language: TypeScript for type safety
 - \*\* Styling: Tailwind CSS 4 + daisy/UI
 - \*\* State Management: Zustand with LocalStorage persistence
 - \*\* Forms: React Hook Form
@@ -42,7 +45,7 @@ A smart application for task management and expense tracking with advanced data 
 
 ```bash
 # Clone the repository
-git clone https://github.com/RamtinRamzani/smart-tracker.git
+git clone https://github.com/RamtinRamzani/smart-todo
 cd smart-tracker
 
 # Install dependencies

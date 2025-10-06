@@ -1,3 +1,5 @@
+import MobileHeader from "./_components/ui/MobileHeader";
+
 export default function Home() {
-  return <div className="text-5xl">TEST</div>;
+  return <MobileHeader />;
 }

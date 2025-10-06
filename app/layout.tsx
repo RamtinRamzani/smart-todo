@@ -1,12 +1,12 @@
 import { Inter } from "next/font/google";
-import Link from "next/link";
+import Footer from "./_components/ui/Footer";
 import "./_styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   title: "Smart Tracker",
-  description: "To-Do and Expense Tracker",
+  description: "Your daily to-do companion",
 };
 
 export default function RootLayout({
@@ -15,19 +15,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <nav className="bg-blue-500 p-4">
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="/">Dashboard</Link>
-            </li>
-            <li>
-              <Link href="/tasks">Tasks</Link>
-            </li>
-          </ul>
-        </nav>
-        <main className="p-4">{children}</main>
+    <html
+      lang="en"
+      className={`${inter.variable} font-sans bg-secondaryBackground`}
+    >
+      <body className="min-h-screen flex flex-col text-foreground antialiased">
+        {/* <header className="bg-background rounded-b-2xl shrink-0">
+          <MobileHeader />
+        </header> */}
+
+        <main
+          className="flex-1 w-full relative mb-9"
+          style={{
+            background:
+              "radial-gradient(ellipse 100% 70% at 50% 0%, rgba(122, 20, 255, 0.15), transparent 80%)",
+          }}
+        >
+          {children}
+        </main>
+
+        <footer className="mt-auto rounded-t-2xl shrink-0">
+          <Footer />
+        </footer>
       </body>
     </html>
   );

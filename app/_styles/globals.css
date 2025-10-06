@@ -1,26 +1,79 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+/* @custom-variant dark (&:is(.dark *)); */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* COLORS */
+  --primaryBackground: 225 71% 19% / 100%;
+  --secondaryBackground: 240 29% 14% / 100%;
+  --primaryText: 223 17% 92% / 100%;
+  --secondaryText: 226 17% 76% / 100%;
+
+  /* BORDER */
+  --border: 266 100% 54% / 100%;
+
+  /* ICON */
+  --icon: 227 17% 68% / 100%;
+
+  /* REDIUS */
+  --radius: 0.625rem;
+
+  /* FONT */
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", monospace;
+
+  /* SHADOW */
+  --shadow-purple: 0px 70px 100px hsla(266, 100%, 54%, 0.2);
+
+  /* --text-60: 60px; */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: hsl(var(--primaryBackground));
+  --color-secondaryBackground: hsl(var(--secondaryBackground));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primaryText: hsl(var(--primaryText));
+  --color-secondaryText: hsl(var(--secondaryText));
+
+  --color-border: hsl(var(--border));
+
+  --color-icon: hsl(var(--icon));
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --shadow-purple: var(--shadow-purple);
+
+  /* --text-text60: var(--text-60); */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
+
+/* Dark Mode Overrides (Default for your app's purple/dark theme) */
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+} 
+*/
+
+/* Extend Tailwind Theme */
+/* @theme {
+  --font-display: "Satoshi", sans-serif;
+  --breakpoint-3xl: 1920px;
+
+  --color-primary-50: oklch(0.92 0.02 258.5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+} */

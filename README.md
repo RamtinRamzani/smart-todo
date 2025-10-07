@@ -77,7 +77,7 @@ src/
 │   ├── _lib/           # Libraries and utilities
 │   ├── _styles/        # styles
 │   ├── _types/         # TypeScript type definitions
-│   ├── _stres/         # Zustand stores
+│   ├── _stores/         # Zustand stores
 │   └── _utils/
 ├── components/
 │   ├── ui/             # Generic UI components

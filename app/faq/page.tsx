@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Container from "../_components/ui/Container";
-import FAQItem from "../_components/ui/FaqItem";
-import Task from "../_components/ui/Task";
+import Container from "../_components/lib/Container";
+import FAQItem from "../_components/lib/FaqItem";
+import TaskHeaderV1 from "../_components/lib/TaskHeaderV1";
 
 const Page = () => {
   const faq = [
@@ -32,7 +32,7 @@ const Page = () => {
 
   return (
     <>
-      <Task title="FAQ" />
+      <TaskHeaderV1 title="FAQ" />
       <Container className="mt-9 flex flex-col gap-5">
         {faq.map((item, i) => (
           <FAQItem

@@ -6,7 +6,7 @@ type ContainerProps = {
 };
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <div className={`px-12 ${className}`}>{children}</div>;
+  return <div className={`px-8 ${className}`}>{children}</div>;
 };
 
 export default Container;

@@ -29,7 +29,7 @@ const FAQItem = ({
       aria-expanded={isOpen}
     >
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-sm font-medium text-primaryText transition-colors duration-200">
+        <h3 className="text-sm font-medium text-purple100 transition-colors duration-200">
           {item.question}
         </h3>
         <CircleArrowDown
@@ -50,7 +50,7 @@ const FAQItem = ({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <p className="text-secondaryText mt-4 text-sm">{item.answer}</p>
+        <p className="text-purple300 mt-4 text-sm">{item.answer}</p>
       </div>
     </div>
   );

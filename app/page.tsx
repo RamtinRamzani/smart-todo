@@ -1,5 +1,10 @@
-import MobileHeader from "./_components/ui/MobileHeader";
+import TaskHeader from "./_components/lib/TaskHeader";
 
 export default function Home() {
-  return <MobileHeader />;
+  return (
+    <>
+      <TaskHeader title="Mamali" />
+      {/* <TaskDetail /> */}
+    </>
+  );
 }

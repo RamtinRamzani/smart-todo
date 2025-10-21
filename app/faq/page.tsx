@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import TaskHeaderV1 from "../_components/ui/TaskHeaderV1";
-import Container from "../_components/ui/Container";
-import FAQItem from "../_components/ui/FaqItem";
+import TaskHeaderV1 from "../_components/shared/TaskHeaderV1";
+import Container from "../_components/layout/Container";
+import FAQItem from "../_components/shared/FaqItem";
 
 const Page = () => {
   const faq = [

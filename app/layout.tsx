@@ -1,5 +1,5 @@
+import Footer from "./_components/layout/Footer";
 import { inter } from "./_components/ui/fonts";
-import Footer from "./_components/ui/Footer";
 import "./_styles/global.css";
 
 export const metadata = {

@@ -5,7 +5,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./../_styles/calendar.css";
 import { CalendarProps } from "react-calendar";
-import Container from "../_components/ui/Container";
+import Container from "../_components/layout/Container";
 
 type Value = CalendarProps["value"];
 

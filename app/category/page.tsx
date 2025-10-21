@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "../_components/ui/Container";
-import TaskHeader from "../_components/ui/TaskHeader";
+import Container from "../_components/layout/Container";
+import TaskHeader from "../_components/shared/TaskHeader";
 
 const Page = () => {
   return (

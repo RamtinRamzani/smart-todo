@@ -2,7 +2,7 @@
 
 import { Menu, Bell } from "lucide-react";
 import { useState } from "react"; // For local time
-import SideMenu from "./SideMenu";
+import SideMenu from "../layout/SideMenu";
 import { useMenuStore } from "../../_stores/MenuStores";
 
 export default function MobileHeader() {

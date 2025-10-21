@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import TaskHeaderV1 from "../_components/ui/TaskHeaderV1";
-import Container from "../_components/ui/Container";
-import DayBox from "../_components/ui/DayBox";
 import AddTaskButton from "../_components/ui/AddTaskButton";
+import Container from "../_components/layout/Container";
+import DayBox from "../_components/shared/DayBox";
+import TaskHeaderV1 from "../_components/shared/TaskHeaderV1";
+import CreateNewTask from "../_components/shared/add-task/CreateNewTask";
 
 const Page = () => {
+  const [showModalAddItem, setShowModalAddItem] = useState(false);
+
   const [faqDetails, setFaqDetails] = useState<number | null>(0); // Open Today by default
   const days = [
     {
@@ -36,7 +39,11 @@ const Page = () => {
           />
         ))}
       </Container>
-      <AddTaskButton />
+
+      <AddTaskButton onclick={() => setShowModalAddItem((prev) => !prev)} />
+      {showModalAddItem && (
+        <CreateNewTask onClose={() => setShowModalAddItem(false)} />
+      )}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { Menu, SearchIcon } from "lucide-react";
-import Container from "./Container";
+import Container from "../layout/Container";
 
 type HeaderProps = { title: string };
 

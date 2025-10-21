@@ -15,7 +15,7 @@ import {
   Repeat,
   Shapes,
 } from "lucide-react";
-import Container from "./Container";
+import Container from "../layout/Container";
 import TaskFieldBox from "./TaskFieldBox";
 
 const TaskDetail = () => {

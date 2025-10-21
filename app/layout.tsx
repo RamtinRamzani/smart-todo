@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
-import Footer from "./_components/ui/Footer";
-import "./_styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+import Footer from "./_components/layout/Footer";
+import { inter } from "./_components/ui/fonts";
+import "./_styles/global.css";
 
 export const metadata = {
   title: "Smart Tracker",

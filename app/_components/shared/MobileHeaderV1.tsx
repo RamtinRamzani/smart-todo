@@ -3,7 +3,7 @@
 import { BluetoothIcon, WifiIcon } from "lucide-react";
 import { Anten, Charge } from "../../_assets/icons";
 
-const MobileHeader = () => {
+const MobileHeaderV1 = () => {
   return (
     <>
       <div className="px-8 flex justify-between h-10 items-center bg-background">
@@ -34,4 +34,4 @@ const MobileHeader = () => {
   );
 };
 
-export default MobileHeader;
+export default MobileHeaderV1;

@@ -71,20 +71,32 @@ npm run type-check   # Check TypeScript
 ## 📂 Project Structure
 
 ```
-src/
-├── app/                # App Router pages and layouts
-│   ├── ـcomponents/    # Generic UI components
-│   ├── _lib/           # Libraries and utilities
-│   ├── _styles/        # styles
-│   ├── _types/         # TypeScript type definitions
-│   ├── _stores/         # Zustand stores
-│   └── _utils/
-├── components/
-│   ├── ui/             # Generic UI components
-│   ├── tasks/          # Task-related components
-│   ├── expenses/       # Expense-related components
-│   └── shared/         # Shared components
-└── hooks/              # Custom React hooks
+smart-tracker/
+├── app/                          # App Router (pages & layouts)
+│   ├── globals.css               # Global styles (theme, vars)
+│   ├── layout.tsx                # Root layout (body, font, bottom nav)
+│   ├── tasks/                    # Example page
+│   │   └── page.tsx              # Tasks list (bottom nav)
+│   ├── calendar/
+│   │   └── page.tsx
+│   ├── mine/
+│   │   └── page.tsx
+│   └── menu/                     # Menu tab (redirect to settings/FAQ, etc)
+│       └── page.tsx
+├── components/                   # Reusable UI
+│   ├── ui/                       # daisy ui components (Button, etc.)
+│   └── shared/                   # Global like SideMenu, BottomNav
+│       ├── SideMenu.tsx          # Side menu slide-in
+│       └── BottomNav.tsx         # Bottom tabs
+│
+├── stores/                       # Zustand stores
+│   └── menuStore.ts              # isOpen/toggle/close
+├── lib/                          # Utils
+│   └── utils.ts                  # Helpers (e.g., cn for clsx)
+├── public/                       # Assets
+│   └── profile.jpg               # Your profile pic
+├── tailwind.config.ts            # Extend colors (purple theme)
+└── package.json                  # Deps: zustand, lucide-react, framer-motion
 ```
 
 ## 🎯 How to Use
@@ -136,6 +148,11 @@ src/
 ## 👨‍💻 Developer
 
 Made by Ramtin Ramezani
+
+## 👨‍💻 Design
+
+Made by Ramtin Ramezani
+link: will be added....
 
 ## 🐛 Bug Reports and Feature Requests
 

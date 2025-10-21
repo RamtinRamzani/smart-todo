@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Container from "../_components/lib/Container";
-import DayBox from "../_components/lib/DayBox";
-import TaskHeaderV1 from "../_components/lib/TaskHeaderV1";
-import AddTaskButton from "../_components/lib/AddTaskButton";
+import TaskHeaderV1 from "../_components/ui/TaskHeaderV1";
+import Container from "../_components/ui/Container";
+import DayBox from "../_components/ui/DayBox";
+import AddTaskButton from "../_components/ui/AddTaskButton";
 
 const Page = () => {
   const [faqDetails, setFaqDetails] = useState<number | null>(0); // Open Today by default

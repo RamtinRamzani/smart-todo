@@ -35,15 +35,13 @@ const TaskDetail = () => {
 
           {/* Subtasks */}
           <div className="space-y-2">
-            <div className="flex items-center gap-3 px-2 py-2 rounded-lg bg-background/50 border border-border">
+            <div className="flex items-center gap-3 px-2">
               <CircleEllipsis className="text-purple400 h-5" />
               <span className="flex-1 text-sm">Task-1</span>
             </div>
-            <div className="flex items-center gap-3 px-2 py-2 rounded-lg bg-background/50 border border-border">
+            <div className="flex items-center gap-3 px-2">
               <CircleCheck className="text-green-400 h-5" />
-              <span className="flex-1 text-sm line-through text-purple300">
-                Task-2
-              </span>
+              <span className="flex-1 text-sm text-purple300">Task-2</span>
             </div>
             <button className="flex items-center gap-3 w-full py-2 px-2 rounded-lg bg-background/50 border border-border text-purple200">
               <Plus size={20} className="text-purple400" />
@@ -95,7 +93,7 @@ const TaskDetail = () => {
           </div>
 
           {/* Attachments */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Paperclip size={20} className="text-purple400" />
               <span className="text-sm font-medium">Attachment</span>

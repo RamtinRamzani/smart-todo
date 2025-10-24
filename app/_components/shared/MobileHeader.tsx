@@ -3,7 +3,6 @@
 import { Bell, Menu } from "lucide-react"
 import { useState } from "react" // For local time
 import { useMenuStore } from "../../_stores/MenuStores"
-import SideMenu from "../layout/SideMenu"
 
 export default function MobileHeader() {
   const { toggle } = useMenuStore()
@@ -23,7 +22,6 @@ export default function MobileHeader() {
       <button className="btn btn-ghost btn-sm p-0 h-8 w-8">
         <Bell className="h-5 w-5" />
       </button>
-      <SideMenu />
     </header>
   )
 }

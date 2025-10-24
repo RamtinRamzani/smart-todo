@@ -1,10 +1,10 @@
-import { Menu, SearchIcon } from "lucide-react";
-import Container from "../layout/Container";
-import Image from "next/image";
+import { Menu, SearchIcon } from "lucide-react"
+import Image from "next/image"
+import Container from "../layout/Container"
 
-const profPicture = "/DSC07502_733815.jpg";
+const profPicture = "/DSC07502_733815.jpg"
 
-type HeaderProps = { title: string; day?: number };
+type HeaderProps = { title: string; day?: number }
 
 const TaskHeader = ({ title, day }: HeaderProps) => {
   return (
@@ -39,7 +39,7 @@ const TaskHeader = ({ title, day }: HeaderProps) => {
         <SearchIcon size={28} />
       </button>
     </Container>
-  );
-};
+  )
+}
 
-export default TaskHeader;
+export default TaskHeader

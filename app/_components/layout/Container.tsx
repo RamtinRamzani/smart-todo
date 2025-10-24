@@ -1,12 +1,12 @@
-import React from "react";
+import type React from "react"
 
 type ContainerProps = {
-  children?: React.ReactNode;
-  className?: string;
-};
+  children?: React.ReactNode
+  className?: string
+}
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <div className={`px-8 ${className}`}>{children}</div>;
-};
+  return <div className={`px-8 ${className}`}>{children}</div>
+}
 
-export default Container;
+export default Container

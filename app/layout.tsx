@@ -1,16 +1,16 @@
-import Footer from "./_components/layout/Footer";
-import { inter } from "./_components/ui/fonts";
-import "./_styles/global.css";
+import Footer from "./_components/layout/Footer"
+import { inter } from "./_components/ui/fonts"
+import "./_styles/global.css"
 
 export const metadata = {
   title: "Smart Tracker",
   description: "Your daily to-do companion",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
@@ -37,5 +37,5 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
-  );
+  )
 }

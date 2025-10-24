@@ -1,28 +1,28 @@
-"use client";
+"use client"
 
-import { CircleArrowDown } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { CircleArrowDown } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const FAQItem = ({
   item,
   isOpen,
   onToggle,
 }: {
-  item: { question: string; answer: string };
-  index: number;
-  isOpen: boolean;
-  onToggle: () => void;
+  item: { question: string; answer: string }
+  index: number
+  isOpen: boolean
+  onToggle: () => void
 }) => {
-  const contentRef = useRef<HTMLDivElement | null>(null);
-  const [maxH, setMaxH] = useState("0px");
+  const contentRef = useRef<HTMLDivElement | null>(null)
+  const [maxH, setMaxH] = useState("0px")
 
   useEffect(() => {
-    if (!contentRef.current) return;
-    setMaxH(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
-  }, [isOpen, item.answer]);
+    if (!contentRef.current) return
+    setMaxH(isOpen ? `${contentRef.current.scrollHeight}px` : "0px")
+  }, [isOpen])
 
   return (
-    <div
+    <button
       key={item.question}
       className="py-2.5 px-4 bg-background rounded-2xl border border-border cursor-pointer transition-shadow duration-200"
       onClick={onToggle}
@@ -50,10 +50,10 @@ const FAQItem = ({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <p className="text-purple300 mt-4 text-sm">{item.answer}</p>
+        <p className="text-purple300 mt-4 text-sm text-left">{item.answer}</p>
       </div>
-    </div>
-  );
-};
+    </button>
+  )
+}
 
-export default FAQItem;
+export default FAQItem

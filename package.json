@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "biome check --write"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
@@ -21,15 +21,13 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
+    "@biomejs/biome": "2.2.7",
     "@hookform/resolvers": "^3.9.0",
     "@tailwindcss/postcss": "^4.1.14",
     "@types/node": "^20.19.16",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "daisyui": "^5.1.26",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.3",
     "tailwindcss": "^4.1.14",
     "typescript": "^5",
     "zod": "^3.23.8"

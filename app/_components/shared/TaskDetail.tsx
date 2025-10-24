@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Calendar,
@@ -14,9 +14,9 @@ import {
   Plus,
   Repeat,
   Shapes,
-} from "lucide-react";
-import Container from "../layout/Container";
-import TaskFieldBox from "./TaskFieldBox";
+} from "lucide-react"
+import Container from "../layout/Container"
+import TaskFieldBox from "./TaskFieldBox"
 
 const TaskDetail = () => {
   return (
@@ -116,7 +116,7 @@ const TaskDetail = () => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default TaskDetail;
+export default TaskDetail

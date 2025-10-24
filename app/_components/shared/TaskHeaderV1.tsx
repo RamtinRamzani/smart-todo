@@ -1,13 +1,13 @@
-import { Menu, SearchIcon } from "lucide-react";
-import Container from "../layout/Container";
+import { Menu, SearchIcon } from "lucide-react"
+import Container from "../layout/Container"
 
-type HeaderProps = { title: string };
+type HeaderProps = { title: string }
 
 const TaskHeaderV1 = ({ title }: HeaderProps) => {
   return (
     <Container className="text-white font-semibold h-14 mt-2 py-1.5 flex items-center justify-between rounded-b-2xl border-b-2 border-border">
       <div className="flex gap-4 items-center">
-        <button>
+        <button type="button">
           <Menu size={28} className="cursor-pointer" />
         </button>
 
@@ -18,7 +18,7 @@ const TaskHeaderV1 = ({ title }: HeaderProps) => {
         <SearchIcon size={28} />
       </button>
     </Container>
-  );
-};
+  )
+}
 
-export default TaskHeaderV1;
+export default TaskHeaderV1

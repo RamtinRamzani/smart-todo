@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import TaskHeaderV1 from "../_components/shared/TaskHeaderV1";
-import Container from "../_components/layout/Container";
-import FAQItem from "../_components/shared/FaqItem";
+import { useState } from "react"
+import Container from "../_components/layout/Container"
+import FAQItem from "../_components/shared/FaqItem"
+import TaskHeaderV1 from "../_components/shared/TaskHeaderV1"
 
 const Page = () => {
   const faq = [
@@ -26,9 +26,9 @@ const Page = () => {
       question: "Question 4?",
       answer: "Lorem consectetur adipisicing elit.Placeat cumque quidem ",
     },
-  ];
+  ]
 
-  const [faqDetails, setFaqDetails] = useState<number | null>(null);
+  const [faqDetails, setFaqDetails] = useState<number | null>(null)
 
   return (
     <>
@@ -45,7 +45,7 @@ const Page = () => {
         ))}
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

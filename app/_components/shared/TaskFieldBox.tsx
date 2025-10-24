@@ -1,10 +1,10 @@
-import { Plus } from "lucide-react";
+import { Plus } from "lucide-react"
 
 interface FieldProps {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  addButton?: boolean;
+  icon: React.ReactNode
+  label: string
+  value: string
+  addButton?: boolean
 }
 
 const TaskFieldBox = ({
@@ -29,6 +29,6 @@ const TaskFieldBox = ({
       </button>
     )}
   </div>
-);
+)
 
-export default TaskFieldBox;
+export default TaskFieldBox

@@ -1,4 +1,4 @@
-import Button from "../../ui/Button";
+import Button from "../../ui/Button"
 
 const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
   return (
@@ -16,6 +16,11 @@ const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
         aria-modal="true"
         className="relative w-80 h-60 bg-background rounded-lg shadow-lg p-4 border border-border"
         onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.stopPropagation()
+          }
+        }}
       >
         {/* modal content */}
         <h3 className="font-medium mb-2">Create New Task</h3>
@@ -27,7 +32,7 @@ const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CreateNewTask;
+export default CreateNewTask

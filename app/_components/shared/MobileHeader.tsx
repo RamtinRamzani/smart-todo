@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { Menu, Bell } from "lucide-react";
-import { useState } from "react"; // For local time
-import SideMenu from "../layout/SideMenu";
-import { useMenuStore } from "../../_stores/MenuStores";
+import { Bell, Menu } from "lucide-react"
+import { useState } from "react" // For local time
+import { useMenuStore } from "../../_stores/MenuStores"
+import SideMenu from "../layout/SideMenu"
 
 export default function MobileHeader() {
-  const { toggle } = useMenuStore();
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const { toggle } = useMenuStore()
+  const [time] = useState(new Date().toLocaleTimeString())
 
   return (
     <header className="fixed top-0 left-0 right-0 p-4 flex items-center justify-between bg-base-100 rounded-b-2xl border-b border-base-200 z-30">
@@ -25,5 +25,5 @@ export default function MobileHeader() {
       </button>
       <SideMenu />
     </header>
-  );
+  )
 }

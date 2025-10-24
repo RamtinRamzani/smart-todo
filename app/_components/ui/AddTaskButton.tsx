@@ -6,7 +6,7 @@ const AddTaskButton = ({ onclick }: { onclick?: () => void }) => {
     >
       +
     </button>
-  );
-};
+  )
+}
 
-export default AddTaskButton;
+export default AddTaskButton

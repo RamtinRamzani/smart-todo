@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { lusitana } from "../_components/ui/fonts";
+import { useState } from "react"
+import { lusitana } from "../_components/ui/fonts"
 // import { lusitana } from "./_components/ui/fonts";
 
 export default function Home() {
-  const [test, setTest] = useState(false);
+  const [test, setTest] = useState(false)
 
   return (
     <div>
@@ -50,5 +50,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

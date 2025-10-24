@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import Container from "../_components/layout/Container";
-import TaskHeader from "../_components/shared/TaskHeader";
+import Container from "../_components/layout/Container"
+import TaskHeader from "../_components/shared/TaskHeader"
 
 const Page = () => {
   return (
@@ -9,7 +9,7 @@ const Page = () => {
       <TaskHeader title="Ramtin" day={1} />
       <Container className="mt-9"></Container>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

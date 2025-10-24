@@ -1,34 +1,34 @@
-"use client";
+"use client"
 
-import { CircleArrowDown, CircleEllipsis, CirclePlus } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { CircleArrowDown, CircleEllipsis, CirclePlus } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 interface DayItem {
-  day: string;
-  title: string[];
+  day: string
+  title: string[]
 }
 
 interface DayBoxProps {
-  item: DayItem;
-  index: number;
-  isOpen: boolean;
-  onToggle: () => void;
+  item: DayItem
+  index: number
+  isOpen: boolean
+  onToggle: () => void
 }
 
 const DayBox = ({ item, index, isOpen, onToggle }: DayBoxProps) => {
-  const contentRef = useRef<HTMLDivElement | null>(null);
-  const [maxH, setMaxH] = useState("0px");
+  const contentRef = useRef<HTMLDivElement | null>(null)
+  const [maxH, setMaxH] = useState("0px")
 
   useEffect(() => {
-    if (!contentRef.current) return;
-    setMaxH(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
-  }, [isOpen, item.title]);
+    if (!contentRef.current) return
+    setMaxH(isOpen ? `${contentRef.current.scrollHeight}px` : "0px")
+  }, [isOpen])
 
   const renderTasks = () => (
     <div className="space-y-2">
-      {item.title.map((title, idx) => (
+      {item.title.map((title) => (
         <div
-          key={idx}
+          key={title}
           className="w-5/6 ml-auto rounded-2xl py-2.5 px-2 flex items-center justify-between gap-2 bg-background border border-border cursor-pointer text-purple100 mt-2"
         >
           <div className="flex items-center gap-2">
@@ -47,10 +47,10 @@ const DayBox = ({ item, index, isOpen, onToggle }: DayBoxProps) => {
         </div>
       )}
     </div>
-  );
+  )
 
   return (
-    <div onClick={onToggle} aria-expanded={isOpen}>
+    <button onClick={onToggle} aria-expanded={isOpen}>
       <div className="rounded-2xl py-2.5 px-4 flex items-center justify-between gap-2 bg-background border border-border cursor-pointer">
         <h3 className="text-sm font-medium text-purple100 transition-colors duration-200">
           {item.day}
@@ -75,8 +75,8 @@ const DayBox = ({ item, index, isOpen, onToggle }: DayBoxProps) => {
       >
         {renderTasks()}
       </div>
-    </div>
-  );
-};
+    </button>
+  )
+}
 
-export default DayBox;
+export default DayBox

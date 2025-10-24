@@ -1,6 +1,6 @@
-import { Calendar, ClipboardCheck, LayoutGrid, User } from "lucide-react";
-import Link from "next/link";
-import Container from "./Container";
+import { Calendar, ClipboardCheck, LayoutGrid, User } from "lucide-react"
+import Link from "next/link"
+import Container from "./Container"
 
 const Footer = () => {
   const menu = [
@@ -8,7 +8,7 @@ const Footer = () => {
     { href: "/tasks", icon: <ClipboardCheck />, label: "Tasks" },
     { href: "/calendar", icon: <Calendar />, label: "Calendar" },
     { href: "/mine", icon: <User />, label: "Mine" },
-  ];
+  ]
 
   return (
     <Container className="bg-background">
@@ -21,11 +21,11 @@ const Footer = () => {
                 <p>{item.label}</p>
               </button>
             </Link>
-          );
+          )
         })}
       </nav>
     </Container>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

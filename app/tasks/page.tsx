@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import AddTaskButton from "../_components/ui/AddTaskButton";
-import Container from "../_components/layout/Container";
-import DayBox from "../_components/shared/DayBox";
-import TaskHeaderV1 from "../_components/shared/TaskHeaderV1";
-import CreateNewTask from "../_components/shared/add-task/CreateNewTask";
+import { useState } from "react"
+import Container from "../_components/layout/Container"
+import CreateNewTask from "../_components/shared/add-task/CreateNewTask"
+import DayBox from "../_components/shared/DayBox"
+import TaskHeaderV1 from "../_components/shared/TaskHeaderV1"
+import AddTaskButton from "../_components/ui/AddTaskButton"
 
 const Page = () => {
-  const [showModalAddItem, setShowModalAddItem] = useState(false);
+  const [showModalAddItem, setShowModalAddItem] = useState(false)
 
-  const [faqDetails, setFaqDetails] = useState<number | null>(0); // Open Today by default
+  const [faqDetails, setFaqDetails] = useState<number | null>(0) // Open Today by default
   const days = [
     {
       day: "Today Tasks",
@@ -24,7 +24,7 @@ const Page = () => {
       day: "Previous",
       title: ["Title 1"],
     },
-  ];
+  ]
   return (
     <>
       <TaskHeaderV1 title="All Task" />
@@ -45,7 +45,7 @@ const Page = () => {
         <CreateNewTask onClose={() => setShowModalAddItem(false)} />
       )}
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

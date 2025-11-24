@@ -1,6 +1,10 @@
-import Button from "../../ui/Button"
+type TaskProps = {
+  onClose?: () => void
+  children: React.ReactNode
+  title?: string
+}
 
-const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
+const CreateNewTask = ({ onClose, children, title }: TaskProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* backdrop - click this to close */}
@@ -14,7 +18,7 @@ const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
       <div
         role="dialog"
         aria-modal="true"
-        className="relative w-80 h-60 bg-background rounded-lg shadow-lg p-4 border border-border"
+        className="relative w-72 bg-background rounded-lg shadow-lg px-4 py-8 border border-border"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
@@ -22,14 +26,8 @@ const CreateNewTask = ({ onClose }: { onClose?: () => void }) => {
           }
         }}
       >
-        {/* modal content */}
-        <h3 className="font-medium mb-2">Create New Task</h3>
-        <input type="text" />
-        <div className="flex justify-between items-center">
-          <Button title="category" variant="primary" size="sm" />
-          <Button title="date and time" variant="secondary" size="sm" />
-          <Button title="set" variant="secondary" size="sm" />
-        </div>
+        <h3 className="font-medium mb-2 capitalize">{title}</h3>
+        {children}
       </div>
     </div>
   )

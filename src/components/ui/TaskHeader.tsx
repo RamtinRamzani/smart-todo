@@ -1,6 +1,6 @@
 import { Menu, SearchIcon } from "lucide-react"
 import Image from "next/image"
-import Container from "../layout/Container"
+import Container from "../../../src/components/layout/Container"
 
 const profPicture = "/DSC07502_733815.jpg"
 

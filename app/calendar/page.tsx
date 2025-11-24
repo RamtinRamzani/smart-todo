@@ -3,9 +3,9 @@
 import { useState } from "react"
 import Calendar from "react-calendar"
 import "react-calendar/dist/Calendar.css"
-import "./../_styles/calendar.css"
+import "@/styles/calendar.css"
 import type { CalendarProps } from "react-calendar"
-import Container from "../_components/layout/Container"
+import Container from "@/components/layout/Container"
 
 type Value = CalendarProps["value"]
 

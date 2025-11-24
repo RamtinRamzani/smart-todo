@@ -1,7 +1,7 @@
 // "use client";
 
 import { BluetoothIcon, WifiIcon } from "lucide-react"
-import { Anten, Charge } from "../../_assets/icons"
+import { Anten, Charge } from "../../../src/assets/icons"
 
 const MobileHeaderV1 = () => {
   return (

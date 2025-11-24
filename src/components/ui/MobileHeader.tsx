@@ -2,7 +2,7 @@
 
 import { Bell, Menu } from "lucide-react"
 import { useState } from "react" // For local time
-import { useMenuStore } from "../../_stores/MenuStores"
+import { useMenuStore } from "../../../src/stores/MenuStores"
 
 export default function MobileHeader() {
   const { toggle } = useMenuStore()

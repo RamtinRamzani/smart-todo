@@ -1,11 +1,13 @@
 "use client"
 
+import { SquarePlus } from "lucide-react"
 import { useState } from "react"
-import Container from "../_components/layout/Container"
-import CreateNewTask from "../_components/shared/add-task/CreateNewTask"
-import DayBox from "../_components/shared/DayBox"
-import TaskHeaderV1 from "../_components/shared/TaskHeaderV1"
-import AddTaskButton from "../_components/ui/AddTaskButton"
+import AddTaskButton from "@/components/button/AddTaskButton"
+import Button from "@/components/button/Button"
+import Container from "@/components/layout/Container"
+import TaskHeaderV1 from "@/components/ui/TaskHeaderV1"
+import CreateNewTask from "./_components/CreateNewTask"
+import DayBox from "./_components/DayBox"
 
 const Page = () => {
   const [showModalAddItem, setShowModalAddItem] = useState(false)
@@ -42,7 +44,29 @@ const Page = () => {
 
       <AddTaskButton onclick={() => setShowModalAddItem((prev) => !prev)} />
       {showModalAddItem && (
-        <CreateNewTask onClose={() => setShowModalAddItem(false)} />
+        <CreateNewTask
+          onClose={() => setShowModalAddItem(false)}
+          title="create new task"
+        >
+          {/* modal content */}
+          <div className="my-8 flex flex-col gap-2">
+            <input
+              type="text"
+              className="w-full py-2 px-4 capitalize text-white placeholder:text-purple-50 border-b-2 border-b-border"
+              placeholder="title"
+            />
+
+            <button className="text-purple400 flex justify-between items-center cursor-pointer">
+              <span className="text-sm font-semibold">Add sub-task</span>
+              <SquarePlus size={18} />
+            </button>
+          </div>
+          <div className="flex justify-between items-center">
+            <Button title="category" variant="primary" size="sm" />
+            <Button title="date & time" variant="secondary" size="sm" />
+            <Button title="set" variant="secondary" size="sm" />
+          </div>
+        </CreateNewTask>
       )}
     </>
   )

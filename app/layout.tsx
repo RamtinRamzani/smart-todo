@@ -1,6 +1,6 @@
-import Footer from "./_components/layout/Footer"
-import { inter } from "./_components/ui/fonts"
-import "./_styles/global.css"
+import { inter } from "@/assets/fonts/fonts"
+import Footer from "@/components/layout/Footer"
+import "@/styles/global.css"
 
 export const metadata = {
   title: "Smart Tracker",

@@ -70,11 +70,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-sans);
-  font-feature-settings:
-    "rlig" 1,
-    "calt" 1;
+  font-feature-settings: "rlig" 1, "calt" 1;
   line-height: 1.5;
   color: hsl(var(--foreground));
+
+  cursor: default;
   background: hsl(var(--background));
 }
 

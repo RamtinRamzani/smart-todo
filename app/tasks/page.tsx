@@ -1,18 +1,20 @@
 "use client"
 
-import { SquarePlus } from "lucide-react"
 import { useState } from "react"
 import AddTaskButton from "@/components/button/AddTaskButton"
-import Button from "@/components/button/Button"
 import Container from "@/components/layout/Container"
 import TaskHeaderV1 from "@/components/ui/TaskHeaderV1"
-import CreateNewTask from "./_components/CreateNewTask"
+import { useTaskStore } from "@/stores/UseTaskStore"
+import CreateTask from "./_components/CreateTask"
+import DateTime from "./_components/DateTime"
 import DayBox from "./_components/DayBox"
+import NewTask from "./_components/NewTask"
+import SetCategory from "./_components/SetCategory"
 
 const Page = () => {
-  const [showModalAddItem, setShowModalAddItem] = useState(false)
+  const { isOpen, toggle, close, currentStep } = useTaskStore()
 
-  const [faqDetails, setFaqDetails] = useState<number | null>(0) // Open Today by default
+  const [faqDetails, setFaqDetails] = useState<number | null>() // Open Today by default
   const days = [
     {
       day: "Today Tasks",
@@ -42,31 +44,17 @@ const Page = () => {
         ))}
       </Container>
 
-      <AddTaskButton onclick={() => setShowModalAddItem((prev) => !prev)} />
-      {showModalAddItem && (
-        <CreateNewTask
-          onClose={() => setShowModalAddItem(false)}
-          title="create new task"
-        >
-          {/* modal content */}
-          <div className="my-8 flex flex-col gap-2">
-            <input
-              type="text"
-              className="w-full py-2 px-4 capitalize text-white placeholder:text-purple-50 border-b-2 border-b-border"
-              placeholder="title"
-            />
-
-            <button className="text-purple400 flex justify-between items-center cursor-pointer">
-              <span className="text-sm font-semibold">Add sub-task</span>
-              <SquarePlus size={18} />
-            </button>
-          </div>
-          <div className="flex justify-between items-center">
-            <Button title="category" variant="primary" size="sm" />
-            <Button title="date & time" variant="secondary" size="sm" />
-            <Button title="set" variant="secondary" size="sm" />
-          </div>
-        </CreateNewTask>
+      <AddTaskButton onClick={toggle} />
+      {isOpen && (
+        <NewTask onClose={close}>
+          {currentStep === "create" ? (
+            <CreateTask />
+          ) : currentStep === "category" ? (
+            <SetCategory />
+          ) : currentStep === "datetime" ? (
+            <DateTime />
+          ) : null}
+        </NewTask>
       )}
     </>
   )

@@ -16,11 +16,11 @@ const Button = ({
   size = "md",
 }: ButtonProps) => {
   const variantClasses = {
-    primary: `bg-purple-800 text-white border border-purple-800 hover:bg-purple-600 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:bg-purple-400 disabled:cursor-not-allowed`,
+    primary: `bg-purple-800 text-white border border-purple-800 hover:bg-purple-600 active:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:bg-purple-400 disabled:cursor-not-allowed`,
 
-    secondary: `bg-gray-100 text-gray-800 border border-gray-200 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:bg-gray-50 disabled:dark:bg-gray-800 disabled:cursor-not-allowed`,
+    secondary: `bg-gray-100 text-gray-800 border border-gray-200 hover:bg-gray-200 active:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 dark:active:bg-gray-500 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:bg-gray-50 disabled:dark:bg-gray-800 disabled:cursor-not-allowed`,
 
-    outline: `bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed`,
+    outline: `bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50 active:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed`,
   }
 
   const sizeStyles = {
@@ -33,7 +33,7 @@ const Button = ({
     <button
       className={`${className ?? ""} ${variantClasses[variant]} ${
         sizeStyles[size]
-      } capitalize rounded-2xl cursor-pointer transition-all duration-75`}
+      } capitalize rounded-2xl cursor-pointer transition-all duration-150 ease-in-out active:scale-95 active:transform`}
       onClick={onClick}
       type={type}
     >

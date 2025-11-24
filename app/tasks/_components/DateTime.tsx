@@ -48,7 +48,7 @@ const DateTime = () => {
           variant="primary"
           size="sm"
           className="px-6 cursor-pointer"
-          onClick={() => setStep("create")}
+          onClick={() => setStep("date")}
         />
       </div>
     </>

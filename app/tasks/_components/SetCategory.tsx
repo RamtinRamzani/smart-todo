@@ -43,7 +43,7 @@ const SetCategory = () => {
           variant="primary"
           size="sm"
           className="px-6 cursor-pointer"
-          onClick={() => setStep("create")}
+          onClick={() => setStep("category")}
         />
       </div>
     </>

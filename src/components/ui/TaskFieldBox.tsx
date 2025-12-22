@@ -1,11 +1,5 @@
 import { Plus } from "lucide-react"
-
-interface FieldProps {
-  icon: React.ReactNode
-  label: string
-  value: string
-  addButton?: boolean
-}
+import type { FieldProps } from "@/types/types"
 
 const TaskFieldBox = ({
   icon,

@@ -1,10 +1,4 @@
-import type React from "react"
-
-type BoxProps = {
-  icon?: React.ReactNode
-  title: string
-  ok: "yes" | "no"
-}
+import type { BoxProps } from "@/types/types"
 
 const Box = ({ icon, title, ok }: BoxProps) => {
   return (

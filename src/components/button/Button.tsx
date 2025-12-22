@@ -1,11 +1,4 @@
-type ButtonProps = {
-  className?: string
-  title?: string
-  onClick?: () => void
-  variant?: "primary" | "secondary" | "outline"
-  type?: "button" | "submit" | "reset"
-  size?: "sm" | "md" | "lg"
-}
+import type { ButtonProps } from "@/types/types"
 
 const Button = ({
   className,

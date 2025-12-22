@@ -1,8 +1,4 @@
-type TaskProps = {
-  onClose?: () => void
-  children?: React.ReactNode
-  // title?: string
-}
+import type { TaskProps } from "@/types/types"
 
 const NewTask = ({ onClose, children }: TaskProps) => {
   return (

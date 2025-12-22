@@ -1,11 +1,10 @@
 "use client"
 
+import "@/styles/calendar.css"
 import { useState } from "react"
+import type { CalendarProps } from "react-calendar"
 import Calendar from "react-calendar"
 import "react-calendar/dist/Calendar.css"
-import "@/styles/calendar.css"
-import type { CalendarProps } from "react-calendar"
-import Container from "@/components/layout/Container"
 
 type Value = CalendarProps["value"]
 

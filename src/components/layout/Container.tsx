@@ -1,9 +1,4 @@
-import type React from "react"
-
-type ContainerProps = {
-  children?: React.ReactNode
-  className?: string
-}
+import type { ContainerProps } from "@/types/types"
 
 const Container = ({ children, className }: ContainerProps) => {
   return <div className={`px-8 ${className}`}>{children}</div>

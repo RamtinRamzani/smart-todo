@@ -1,6 +1,4 @@
-type AddTaskButtonProps = {
-  onClick?: () => void
-}
+import type { AddTaskButtonProps } from "@/types/types"
 
 const AddTaskButton = ({ onClick }: AddTaskButtonProps) => {
   return (

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Container from "@/components/layout/Container"
-import TaskHeaderV1 from "@/components/ui/TaskHeaderV1"
+import TaskHeaderV1 from "@/components/ui/PageHeader"
 import FAQItem from "./_components/FaqItem"
 
 const Page = () => {

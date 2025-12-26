@@ -55,6 +55,15 @@ type ProfDetailsTypes = {
   day?: number
 }
 
+type HeaderProps = { title: string }
+
+type MenuListProps = {
+  openSubMenu: string | null
+  onToggleSubMenu: (id: string) => void
+  onCloseAnySubMenu: () => void
+  onCloseEverything: () => void
+}
+
 export type {
   DayItem,
   DayBoxProps,
@@ -65,4 +74,6 @@ export type {
   BoxProps,
   FieldProps,
   ProfDetailsTypes,
+  HeaderProps,
+  MenuListProps,
 }

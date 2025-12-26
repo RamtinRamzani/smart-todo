@@ -3,7 +3,7 @@
 import { useState } from "react"
 import AddTaskButton from "@/components/button/AddTaskButton"
 import Container from "@/components/layout/Container"
-import TaskHeaderV1 from "@/components/ui/TaskHeaderV1"
+import PageHeader from "@/components/ui/PageHeader"
 import { useTaskStore } from "@/stores/UseTaskStore"
 import CreateTask from "./_components/CreateTask"
 import DateTime from "./_components/DateTime"
@@ -50,7 +50,7 @@ const Page = () => {
   }
 
   const renderDayBoxes = () => (
-    <Container className="mt-9 flex flex-col gap-5">
+    <Container className="mt-4 flex flex-col gap-5">
       {days.map((item, i) => (
         <DayBox
           key={item.day}
@@ -64,7 +64,7 @@ const Page = () => {
   )
   return (
     <>
-      <TaskHeaderV1 title="All Task" />
+      <PageHeader title="All Task" />
       {renderDayBoxes()}
       <AddTaskButton onClick={toggle} />
       {isOpen && <NewTask onClose={close}>{renderModalContent()}</NewTask>}

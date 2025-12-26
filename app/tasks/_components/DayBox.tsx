@@ -1,10 +1,8 @@
 "use client"
 
-import { DayBoxProps } from "@/types/types"
 import { CircleArrowDown, CircleEllipsis, CirclePlus } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-
-
+import type { DayBoxProps } from "@/types/types"
 
 const DayBox = ({ item, index, isOpen, onToggle }: DayBoxProps) => {
   const contentRef = useRef<HTMLDivElement | null>(null)

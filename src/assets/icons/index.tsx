@@ -182,4 +182,22 @@ const Search = () => {
   )
 }
 
-export { Bluetooth, Wifi, Anten, Charge, Back, Search }
+const ChartSvg = () => {
+  return (
+    <svg
+      width="140"
+      height="71"
+      viewBox="0 0 169 71"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>Chart Svg</title>
+      <path
+        d="M0.386719 69.8639L34.3867 28.3639L52.8867 54.3639L93.8867 13.3639L116.387 49.3639L168.387 0.363892"
+        stroke="#135BD4"
+      />
+    </svg>
+  )
+}
+
+export { Bluetooth, Wifi, Anten, Charge, Back, Search, ChartSvg }

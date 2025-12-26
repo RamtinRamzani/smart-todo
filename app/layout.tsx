@@ -1,6 +1,7 @@
-import { inter } from "@/assets/fonts/fonts"
 import Footer from "@/components/layout/Footer"
+import Header from "@/components/layout/Header"
 import "@/styles/global.css"
+import { inter } from "../src/assets/fonts/fonts"
 
 export const metadata = {
   title: "Smart Tracker",
@@ -18,9 +19,7 @@ export default function RootLayout({
       className={`${inter.variable} font-sans bg-secondaryBackground`}
     >
       <body className="min-h-screen flex flex-col text-foreground antialiased">
-        {/* <header className="bg-background rounded-b-2xl shrink-0">
-          <MobileHeader />
-        </header> */}
+        <Header />
 
         <main
           className="flex-1 w-full relative mb-9"
@@ -32,9 +31,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="mt-auto rounded-t-2xl shrink-0">
-          <Footer />
-        </footer>
+        <Footer />
       </body>
     </html>
   )

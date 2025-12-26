@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image"
+
 type AddTaskButtonProps = {
   onClick?: () => void
 }
@@ -47,6 +49,12 @@ type TaskProps = {
   // title?: string
 }
 
+type ProfDetailsTypes = {
+  profPicture: StaticImageData
+  title?: string
+  day?: number
+}
+
 export type {
   DayItem,
   DayBoxProps,
@@ -56,4 +64,5 @@ export type {
   ContainerProps,
   BoxProps,
   FieldProps,
+  ProfDetailsTypes,
 }

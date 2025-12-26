@@ -1,4 +1,3 @@
-// stores/useTaskStore.ts
 import { create } from "zustand"
 
 type Step = "create" | "category" | "datetime" | "date" | "time"

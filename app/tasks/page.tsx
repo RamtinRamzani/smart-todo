@@ -1,16 +1,22 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import AddTaskButton from "../_components/ui/AddTaskButton";
-import Container from "../_components/layout/Container";
-import DayBox from "../_components/shared/DayBox";
-import TaskHeaderV1 from "../_components/shared/TaskHeaderV1";
-import CreateNewTask from "../_components/shared/add-task/CreateNewTask";
+import { useState } from "react"
+import AddTaskButton from "@/components/button/AddTaskButton"
+import Container from "@/components/layout/Container"
+import TaskHeaderV1 from "@/components/ui/TaskHeaderV1"
+import { useTaskStore } from "@/stores/UseTaskStore"
+import CreateTask from "./_components/CreateTask"
+import DateTime from "./_components/DateTime"
+import DateV1 from "./_components/DateV1"
+import DayBox from "./_components/DayBox"
+import NewTask from "./_components/NewTask"
+import SetCategory from "./_components/SetCategory"
+import TimeV1 from "./_components/TimeV1"
 
 const Page = () => {
-  const [showModalAddItem, setShowModalAddItem] = useState(false);
+  const { isOpen, toggle, close, currentStep } = useTaskStore()
 
-  const [faqDetails, setFaqDetails] = useState<number | null>(0); // Open Today by default
+  const [faqDetails, setFaqDetails] = useState<number | null>()
   const days = [
     {
       day: "Today Tasks",
@@ -24,28 +30,46 @@ const Page = () => {
       day: "Previous",
       title: ["Title 1"],
     },
-  ];
+  ]
+
+  const renderModalContent = () => {
+    switch (currentStep) {
+      case "create":
+        return <CreateTask />
+      case "category":
+        return <SetCategory />
+      case "datetime":
+        return <DateTime />
+      case "date":
+        return <DateV1 />
+      case "time":
+        return <TimeV1 />
+      default:
+        return null
+    }
+  }
+
+  const renderDayBoxes = () => (
+    <Container className="mt-9 flex flex-col gap-5">
+      {days.map((item, i) => (
+        <DayBox
+          key={item.day}
+          item={item}
+          index={i}
+          isOpen={faqDetails === i}
+          onToggle={() => setFaqDetails((prev) => (prev === i ? null : i))}
+        />
+      ))}
+    </Container>
+  )
   return (
     <>
       <TaskHeaderV1 title="All Task" />
-      <Container className="mt-9 flex flex-col gap-5">
-        {days.map((item, i) => (
-          <DayBox
-            key={item.day}
-            item={item}
-            index={i}
-            isOpen={faqDetails === i}
-            onToggle={() => setFaqDetails((prev) => (prev === i ? null : i))}
-          />
-        ))}
-      </Container>
-
-      <AddTaskButton onclick={() => setShowModalAddItem((prev) => !prev)} />
-      {showModalAddItem && (
-        <CreateNewTask onClose={() => setShowModalAddItem(false)} />
-      )}
+      {renderDayBoxes()}
+      <AddTaskButton onClick={toggle} />
+      {isOpen && <NewTask onClose={close}>{renderModalContent()}</NewTask>}
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

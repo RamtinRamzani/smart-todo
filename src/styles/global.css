@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* @custom-variant dark (&:is(.dark *)); */
+
+:root {
+  /* BACKGROUND */
+  --primaryBackground: 225 71% 19% / 100%;
+  --secondaryBackground: 240 29% 14% / 100%;
+
+  /* TEXT */
+  --text-purple-100: 223 17% 92% / 100%;
+  --text-purple-200: 227 17% 84% / 100%;
+  --text-purple-300: 226 17% 76% / 100%;
+  --text-purple-400: 227 17% 68% / 100%;
+  --text-purple-500: 225 22% 43% / 100%;
+  --text-purple-600: 226 45% 27% / 100%;
+  --text-purple-700: 225 71% 19% / 100%;
+  --text-purple-800: 225 71% 14% / 100%;
+  --text-purple-900: 225 71% 10% / 100%;
+  --text-purple-950: 227 70% 4% / 100%;
+
+  /* BORDER */
+  --border: 266 100% 54% / 100%;
+
+  /* ICON */
+  --icon: 227 17% 68% / 100%;
+
+  /* REDIUS */
+  --radius: 0.625rem;
+
+  /* FONT */
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", monospace;
+
+  /* SHADOW */
+  --shadow-purple: 0px 70px 100px hsla(266, 100%, 54%, 0.2);
+
+  /* --text-60: 60px; */
+}
+
+@theme inline {
+  --color-background: hsl(var(--primaryBackground));
+  --color-secondaryBackground: hsl(var(--secondaryBackground));
+
+  --color-purple100: hsl(var(--text-purple-100));
+  --color-purple200: hsl(var(--text-purple-200));
+  --color-purple300: hsl(var(--text-purple-300));
+  --color-purple400: hsl(var(--text-purple-400));
+  --color-purple500: hsl(var(--text-purple-500));
+  --color-purple600: hsl(var(--text-purple-600));
+  --color-purple700: hsl(var(--text-purple-700));
+  --color-purple800: hsl(var(--text-purple-800));
+  --color-purple900: hsl(var(--text-purple-900));
+  --color-purple950: hsl(var(--text-purple-950));
+
+  --color-border: hsl(var(--border));
+
+  --color-icon: hsl(var(--icon));
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --shadow-purple: var(--shadow-purple);
+
+  /* --text-text60: var(--text-60); */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+
+  cursor: default;
+  background: hsl(var(--background));
+}
+
+/* Dark Mode Overrides (Default for your app's purple/dark theme) */
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+} 
+*/
+
+/* Extend Tailwind Theme */
+/* @theme {
+  --font-display: "Satoshi", sans-serif;
+  --breakpoint-3xl: 1920px;
+
+  --color-primary-50: oklch(0.92 0.02 258.5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+} */

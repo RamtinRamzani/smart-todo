@@ -77,23 +77,3 @@ body {
   cursor: default;
   background: hsl(var(--background));
 }
-
-/* Dark Mode Overrides (Default for your app's purple/dark theme) */
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-  }
-} 
-*/
-
-/* Extend Tailwind Theme */
-/* @theme {
-  --font-display: "Satoshi", sans-serif;
-  --breakpoint-3xl: 1920px;
-
-  --color-primary-50: oklch(0.92 0.02 258.5);
-
-  --radius-sm: calc(var(--radius) - 4px);
-} */

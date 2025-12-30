@@ -1,6 +1,7 @@
 import { create } from "zustand"
 
 type Step = "create" | "category" | "datetime" | "date" | "time"
+type TaskCategories = "All Task" | "Wish List" | "Personal" | "Work"
 
 interface TaskState {
   isOpen: boolean

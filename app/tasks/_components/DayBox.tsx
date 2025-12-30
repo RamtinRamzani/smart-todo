@@ -15,14 +15,14 @@ const DayBox = ({ item, index, isOpen, onToggle }: DayBoxProps) => {
 
   const renderTasks = () => (
     <div className="space-y-2">
-      {item.title.map((title) => (
+      {item.tasks.map((task) => (
         <div
-          key={title}
+          key={task.title}
           className="w-5/6 ml-auto rounded-2xl py-2.5 px-2 flex items-center justify-between gap-2 bg-background border border-border cursor-pointer text-purple100 mt-2"
         >
           <div className="flex items-center gap-2">
             <CircleEllipsis className="text-purple400 h-5" />
-            <p className="text-xs font-light capitalize">{title}</p>
+            <p className="text-xs font-light capitalize">{task.title}</p>
           </div>
           <div className="flex items-center gap-2">
             <CirclePlus className="text-purple400 h-5" />

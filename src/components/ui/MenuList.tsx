@@ -1,4 +1,3 @@
-// components/MenuList.tsx (or wherever you prefer)
 "use client"
 
 import { AnimatePresence, motion } from "framer-motion"
@@ -27,7 +26,7 @@ export default function MenuList({
                 onClick={() => {
                   onToggleSubMenu(item.id)
                 }}
-                className="w-full flex items-center gap-4 p-2 rounded-lg text-purple300 hover:text-hover:bg-purple700 transition-colors duration-300"
+                className="w-full flex items-center gap-4 p-2 rounded-lg text-purple300 hover:text-hover:bg-purple700 transition-colors duration-300 cursor-pointer"
               >
                 <span className="shrink-0">{item.icon}</span>
                 <span className="text-lg font-medium">{item.label}</span>

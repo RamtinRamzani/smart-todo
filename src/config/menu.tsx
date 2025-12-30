@@ -15,7 +15,7 @@ export const MAIN_MENU = [
     href: "/tasks",
     icon: <ClipboardCheck />,
     label: "Tasks",
-    task: ["Wish List", "All Tasks", "Personal"],
+    task: ["Wish List", "All Tasks", "Personal", "Work"],
   },
   { id: "calendar", href: "/calendar", icon: <Calendar />, label: "Calendar" },
   { id: "faq", href: "/faq", icon: <FileQuestionMark />, label: "Faq" },

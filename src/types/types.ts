@@ -1,5 +1,29 @@
 import type { StaticImageData } from "next/image"
 
+/* Task Types */
+
+type TaskCategory = "Wish List" | "All Tasks" | "Personal" | "Work"
+
+interface TaskItem {
+  id: string
+  title: string
+  category: TaskCategory
+}
+
+interface DayItem {
+  day: string
+  tasks: TaskItem[]
+}
+
+interface DayBoxProps {
+  item: DayItem
+  index: number
+  isOpen: boolean
+  onToggle: () => void
+}
+
+/* UI / Layout */
+
 type AddTaskButtonProps = {
   onClick?: () => void
 }
@@ -14,20 +38,8 @@ type ButtonProps = {
 }
 
 type ContainerProps = {
-  children?: React.ReactNode
+  children: React.ReactNode
   className?: string
-}
-
-interface DayItem {
-  day: string
-  title: string[]
-}
-
-interface DayBoxProps {
-  item: DayItem
-  index: number
-  isOpen: boolean
-  onToggle: () => void
 }
 
 type BoxProps = {
@@ -46,7 +58,6 @@ interface FieldProps {
 type TaskProps = {
   onClose?: () => void
   children?: React.ReactNode
-  // title?: string
 }
 
 type ProfDetailsTypes = {
@@ -55,13 +66,23 @@ type ProfDetailsTypes = {
   day?: number
 }
 
-type HeaderProps = { title: string }
+type HeaderProps = {
+  title: string
+}
+
+/* Menu / Routing */
 
 type MenuListProps = {
   openSubMenu: string | null
   onToggleSubMenu: (id: string) => void
   onCloseAnySubMenu: () => void
   onCloseEverything: () => void
+}
+
+type TaskPageParams = {
+  searchParams: {
+    type?: TaskCategory
+  }
 }
 
 export type {
@@ -76,4 +97,5 @@ export type {
   ProfDetailsTypes,
   HeaderProps,
   MenuListProps,
+  TaskPageParams,
 }

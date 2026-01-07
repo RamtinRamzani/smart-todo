@@ -20,6 +20,19 @@ interface DayBoxProps {
   index: number
   isOpen: boolean
   onToggle: () => void
+  onEditTask: (task: TaskItem) => void
+}
+
+type Step = "create" | "category" | "datetime" | "date" | "time"
+
+interface TaskState {
+  isOpen: boolean
+  currentStep: Step
+  toggle: () => void
+  close: () => void
+  currentTask?: TaskItem
+  setStep: (step: Step) => void
+  setCurrentTask: (task?: TaskItem) => void
 }
 
 /* UI / Layout */
@@ -38,7 +51,7 @@ type ButtonProps = {
 }
 
 type ContainerProps = {
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
 }
 
@@ -89,6 +102,7 @@ export type {
   DayItem,
   DayBoxProps,
   TaskProps,
+  TaskCategory,
   AddTaskButtonProps,
   ButtonProps,
   ContainerProps,
@@ -98,4 +112,5 @@ export type {
   HeaderProps,
   MenuListProps,
   TaskPageParams,
+  TaskState,
 }

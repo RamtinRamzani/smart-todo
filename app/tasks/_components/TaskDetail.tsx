@@ -16,7 +16,7 @@ import {
   Shapes,
 } from "lucide-react"
 import Container from "../../../src/components/layout/Container"
-import TaskFieldBox from "./TaskFieldBox"
+import TaskFieldBox from "../../../src/components/ui/TaskFieldBox"
 
 const TaskDetail = () => {
   return (

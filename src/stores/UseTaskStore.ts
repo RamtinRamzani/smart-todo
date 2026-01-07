@@ -1,20 +1,13 @@
 import { create } from "zustand"
-
-type Step = "create" | "category" | "datetime" | "date" | "time"
-type TaskCategories = "All Task" | "Wish List" | "Personal" | "Work"
-
-interface TaskState {
-  isOpen: boolean
-  currentStep: Step
-  toggle: () => void
-  close: () => void
-  setStep: (step: Step) => void
-}
+import type { TaskState } from "@/types/types"
 
 export const useTaskStore = create<TaskState>((set) => ({
   isOpen: false,
   currentStep: "create",
+  currentTask: undefined,
   toggle: () => set((state) => ({ isOpen: !state.isOpen })),
-  close: () => set({ isOpen: false, currentStep: "create" }),
+  close: () =>
+    set({ isOpen: false, currentStep: "create", currentTask: undefined }),
   setStep: (step) => set({ currentStep: step }),
+  setCurrentTask: (task) => set({ currentTask: task }),
 }))

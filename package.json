@@ -9,6 +9,7 @@
     "lint": "biome check --write"
   },
   "dependencies": {
+    "cally": "^0.9.0",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.16",
